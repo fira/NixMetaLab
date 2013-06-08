@@ -1,0 +1,6 @@
+### PANDORA:
+10.0.254.2 used to reach Host NAT
+Switched pool: 10.0.1.0/24
+ -   1: Pandora
+ -  20: Orion
+	

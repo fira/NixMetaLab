@@ -1,0 +1,33 @@
+# Configure switching
+brctl addbr br0
+brctl stp br0 on
+# Configure main switch ports
+brctl addif br0 eth1
+ip link set dev eth1 up
+brctl addif br0 eth2
+ip link set dev eth2 up
+brctl addif br0 eth3
+ip link set dev eth3 up
+brctl addif br0 eth4
+ip link set dev eth4 up
+brctl addif br0 eth5
+ip link set dev eth5 up
+brctl addif br0 eth6
+ip link set dev eth6 up
+brctl addif br0 eth7
+ip link set dev eth7 up
+brctl addif br0 eth8
+ip link set dev eth8 up
+brctl addif br0 eth9
+ip link set dev eth9 up
+# Configure router interface
+ip addr add dev br0 10.0.1.1/24
+ip link set dev br0 up
+
+
+
+# Load firewall rules
+iptables-restore < /etc/iptables/rules.v4
+
+dnsmasq
+

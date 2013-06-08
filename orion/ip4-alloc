@@ -1,0 +1,6 @@
+Public IP Range: 
+	Interconnect to Pandora IX by 10.0.1.20
+	10.221.16.0/24 : DMZ VLAN ID 10
+
+Private IP Range:
+	192.168.0.0/22 : Internal machines VLAN ID 20	

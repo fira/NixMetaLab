@@ -1,0 +1,16 @@
+# Uplink to the Pandora IX
+ip addr add dev eth1 10.0.1.20/24
+ip link set dev eth1 up
+ip route add default via 10.0.1.1
+
+# Internal Orion Network
+ip link set dev eth0 up
+# Servers VLAN and DMZ, ID 10 - 10.100.1.0/24
+vconfig add eth0 10
+ip addr add dev eth0.10 10.221.16.0/24
+ip link set dev eth0.10 up
+# Clients VLAN, Internal, NATed, ID 20 - 10.100.2.0/24
+vconfig add eth0 20
+ip addr add dev eth0.20 192.168.1.1/22
+ip link set dev eth0.20 up 
+

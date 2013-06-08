@@ -1,0 +1,35 @@
+
+### METALAB PUBLIC IP RANGE 
+### Routable to the real Internet via IX' NAT then Host NAT
+### 10.0.0.0/8
+###############################################################################
+10.0.0.0/16			Switching and interconnection pool
+ 	|= 10.0.1.0/24			Pandora Lab IX
+	|= 10.0.254.0/24		Host-side NAT	
+
+10.221.16.0/24			Orion Lab
+
+10.4.0.0/16			Reserved (Used by American ChaosVPN)
+10.100.0.0/12			Reserved (Used by American ChaosVPN)
+
+
+
+### METALAB INTERNAL IP RANGE
+### Avoid using for traffic routable to the real internet 
+### 172.16.0.0/12
+###############################################################################
+172.22.0.0/15			Reserved (Used by DN42)
+172.31.0.0/16			Reserved (Used by European ChaosVPN)
+
+
+
+### PRIVATE IP RANGE:
+###############################################################################
+192.168.0.0/16			Reserved for private addressing
+
+
+
+### HOST-SIDE NAT STATIC ADDRESSES
+###############################################################################
+10.0.254.1	Host 
+10.0.254.2	Pandora IX
